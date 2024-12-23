@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Health Mate</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div class="nav">
+        <h2 text-align ="left">AI Health Mate Automated Medicine Reccomendation</h2>
+        <ul id="item">
+            <li><a href="#">Features</a></li>
+            <li class="dropdown">
+                <a href="#">Profile</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+        <div class="icon">
+            <i class="fa-thin fa-bars"></i>
+        </div>
+    </div>
+    <!-- Flash messages section -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="video-container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="image/video.mp4" type="video/mp4">
+            <source src="image/" type="video/webm">
+        </video>
+        <div class="mid">
+            <p>Prevent potential health issues and effectively manage your health</p>
+            <h2>Your Personal Health Assistant</h2>
+            <div class="btn">
+                <a class="border" href="#">Get Started</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="class" data-aos="flip-left">
+        <p class="paragraph"></p>
+        <h2 class="Our AI Health Mate"></h2>
+        <div class="classMenu">
+            <div class="team1">
+                <div class="img">
+                    <img src="image/med.jpg" alt="image1">
+                    <div class="name">
+                        <div class="namedetails">
+                            <div class="btn">
+                                <a class="border" href="#">Medication</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="team2">
+                <div class="img">
+                    <img src="image/pre.jpeg" alt="image1">
+                    <div class="name">
+                        <div class="namedetails">
+                            <div class="btn">
+                                <a class="border" href="#">Precaution</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="team3">
+                <div class="img">
+                    <img src="image/diet.jpeg" alt="image1">
+                    <div class="name">
+                        <div class="namedetails">
+                            <div class="btn">
+                                <a class="border" href="#">Diet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="column">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="#">AI Health Assistant</a></li>
+            <li><a href="#">Supplements</a></li>
+            <li><a href="#">Symptoms checker</a></li>
+            <li><a href="#">Second opinion</a></li>
+            <!-- add more links here -->
+          </ul>
+        </div>
+        <div class="column">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="#">AI Doctor</a></li>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">All Articles</Article></a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h2>Trust</h2>
+          <ul>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">Cookie policy</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <!-- add more links here -->
+          </ul>
+        </div>
+      </div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset:300,
+        duration: 1000,
+    });
+
+</script>
+
+</body>
+</html>

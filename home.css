@@ -1,0 +1,253 @@
+/* Reset margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar styles */
+.nav {
+    position: fixed;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Arrange children in a row */
+    justify-content: space-between; /* Distribute space between children */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    padding: 1rem 6.5rem;
+    background: #222;
+    z-index: 100000;
+}
+
+.nav h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-right: auto; /* Pushes the heading to the left */
+}
+
+#item {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Pushes the items to the right */
+}
+
+#item li {
+    list-style: none;
+    padding-right: 50px;
+}
+
+#item li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#item li a:hover, #item .icon i:hover {
+    color: #008CBA;
+    cursor: pointer;
+}
+
+#item .icon i {
+    color: #fff;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Background and container styles */
+.back {
+    background-image: url(hm.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mid p {
+    color: black;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+}
+
+.mid h2 {
+    color: black;
+    font-size: 3rem;
+}
+
+.mid .btn {
+    margin-top: 2rem;
+}
+
+.mid .btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mid .btn a.border {
+    color: black;
+    border: 1px solid #008000;
+    font-weight: 500;
+    padding: 0.9rem 1.6rem;
+    border-radius: 3px;
+}
+
+.mid .btn a.border:hover {
+    background: #008CBA;
+    border: 1px solid black;
+}
+
+/* Align classMenu items */
+.class {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.class .classMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.class .classMenu .team1,
+.class .classMenu .team2,
+.class .classMenu .team3 {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 
+        3.3px 4px 3px rgba(0, 0, 0, 0.025),
+        8px 9.5px 7.2px rgba(0, 0, 0, 0.036),
+        15px 17.9px 13.6px rgba(0, 0, 0, 0.045),
+        26.8px 31.9px 24.3px rgba(0, 0, 0, 0.054),
+        50.1px 59.7px 45.5px rgba(0, 0, 0, 0.065),
+        120px 143px 109px rgba(0, 0, 0, 0.09);
+}
+
+.class .classMenu .team1 {
+    width: 25%;
+}
+
+.class .classMenu .team2 {
+    width: 25%;
+}
+
+.class .classMenu .team3 {
+    width: 19%;
+}
+
+.class .classMenu .team1 .img img,
+.class .classMenu .team2 .img img,
+.class .classMenu .team3 .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.class .classMenu .team1 .name,
+.class .classMenu .team2 .name,
+.class .classMenu .team3 .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px 0 20px;
+}
+
+.class .classMenu .team1 .teamdetails,
+.class .classMenu .team2 .teamdetails,
+.class .classMenu .team3 .teamdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #222;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    margin: 20px;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    flex: 1;
+    margin: 20px;
+    width: 30%;
+}
+
+.column h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.column p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #008CBA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

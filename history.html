@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-3">
+    <h2>Prediction History</h2>
+    {% if history %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Disease</th>
+                    <th>Precautions</th>
+                    <th>Medications</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in history %}
+                    <tr>
+                        <td>{{ entry['prediction_date'] }}</td>
+                        <td>{{ entry['predicted_disease'] }}</td>
+                        <td>{{ entry['precautions'] }}</td>
+                        <td>{{ entry['medications'] }}</td>
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No prediction history found.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
